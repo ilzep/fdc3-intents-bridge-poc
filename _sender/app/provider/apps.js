@@ -4,6 +4,7 @@ export async function getApps() {
       {
         appId: 'matrix',
         name: 'matrix',
+        manifest: 'http://localhost:4000/_receiver/app/receiver.json',
         manifestType: 'openfin',
         publisher: 'openfin',
         icons: [],
@@ -32,7 +33,37 @@ export async function getApps() {
             name: 'ViewChart',
             displayName: 'View Chart',
             contexts: ['fdc3.instrument'],
-        },
+          },
+          {
+            name: 'ViewContact',
+            displayName: 'View Contact',
+            contexts: ['fdc3.instrument'],
+          },
+        ],
+      },
+      {
+        appId: 'platform_sender3',
+        name: 'platform_sender3',
+        manifest: 'http://localhost:4000/_sender/app/sender2.json',
+        manifestType: 'openfin',
+        title: 'platform_sender3',
+        description: 'platform_sender3',
+        images: [],
+        contactEmail: 'support@openfin.co',
+        supportEmail: 'support@openfin.co',
+        publisher: 'openfin',
+        icons: [],
+        intents: [
+          {
+            name: 'ViewChart',
+            displayName: 'View Chart',
+            contexts: ['fdc3.instrument'],
+          },
+          {
+            name: 'ViewContact',
+            displayName: 'View Contact',
+            contexts: ['fdc3.instrument'],
+          },
         ],
       },
     ];

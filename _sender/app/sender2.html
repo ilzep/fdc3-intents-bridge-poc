@@ -16,6 +16,12 @@
         responseElement.innerHTML = JSON.stringify(context);
         document.getElementById('responseText').appendChild(responseElement);
       });
+
+      fdc3.addIntentListener('ViewContact', (context) => {
+        let responseElement = document.createElement('div');
+        responseElement.innerHTML = JSON.stringify(context);
+        document.getElementById('responseText').appendChild(responseElement);
+      });
     </script>
   </body>
 </html>
