@@ -9,14 +9,14 @@
     "defaultWindowOptions": {
       "fdc3InteropApi": "1.2"
     },
-    "providerUrl": "http://localhost:4000/provider/provider.html",
+    "providerUrl": "http://localhost:4000/_sender/app/provider/provider.html",
     "autoShow": false
   },
   "snapshot": {
     "windows": [
       {
         "name": "platform_receiver_window_1",
-        "url": "http://localhost:4000/receiver/receiver.html"
+        "url": "http://localhost:4000/_sender/app/sender2.html"
       }
     ]
   }

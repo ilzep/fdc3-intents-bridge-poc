@@ -4,13 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:server": "node server.js",
-    "dev:sender": "openfin -l -c .\\sender\\sender.json",
-    "start": "run-p dev:*",
     "start:sender": "node _sender/server.js",
-    "fin:sender":  "openfin -l -c _sender/app/sender.json",    
+    "fin:sender":  "openfin -l -c _sender/app/sender1.json",    
     "start:receiver": "node _receiver/server.js",
-    "fin:receiver":  "openfin -l -c _receiver/app/receiver.json"
+    "fin:receiver":  "openfin -l -c _receiver/app/receiver.json",
+    "start": "run-p start:*"
   },
   "keywords": [],
   "author": "",
