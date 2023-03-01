@@ -100,6 +100,7 @@ export function interopOverride(InteropBroker, provider, options, ...args) {
 
             const clientBus = await fin.InterApplicationBus.Channel.connect('currencyPairChannel', {payload: 'auth_token'});
             const response = await clientBus.dispatch('sendCurrencyPair', intent);
+            // const response = await clientBus.send('','sendCurrencyPair', intent);
             console.info(`[sendMessageOverBridge], response: ${JSON.stringify(response)}`);
             return {
                 source: app.appId,

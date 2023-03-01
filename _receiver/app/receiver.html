@@ -16,14 +16,24 @@
 
         const clientBus = await fin.InterApplicationBus.Channel.create('currencyPairChannel');
         clientBus.onConnection((identity, payload) => {
+          updateUI('ON CONNECTION');
           updateUI(payload);
           updateUI(identity);
         });
 
         clientBus.register('sendCurrencyPair', (payload, identity) => {
+          updateUI('REGISTER');
           updateUI(payload);
           updateUI(identity);
         });
+
+        clientBus.beforeAction((action, payload, identity) => {
+          updateUI('BEFORE ACTION');
+          updateUI(action);
+          updateUI(payload);
+          updateUI(identity);
+        });
+
       }
 
       function updateUI(context) {
@@ -33,18 +43,6 @@
       }
 
       setup();
-
-      fdc3.addIntentListener('ViewChart', (context) => {
-        let responseElement = document.createElement('div');
-        responseElement.innerHTML = JSON.stringify(context);
-        document.getElementById('responseText').appendChild(responseElement);
-      });
-
-      fdc3.addIntentListener('ViewContact', (context) => {
-        let responseElement = document.createElement('div');
-        responseElement.innerHTML = JSON.stringify(context);
-        document.getElementById('responseText').appendChild(responseElement);
-      });
     </script>
   </body>
 </html>

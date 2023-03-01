@@ -2,12 +2,12 @@
   "devtools_port": 9090,
   "runtime": {
     "arguments": "--security-realm=matrix --enable-mesh",
-    "version": "21.93.65.4"
+    "version": "stable"
   },
   "platform": {
     "uuid": "matrix",
     "defaultWindowOptions": {
-      "fdc3InteropApi": "1.2"
+      "fdc3InteropApi": "2.0"
     },
     "providerUrl": "http://localhost:4001/_receiver/app/provider/provider.html",
     "autoShow": false
