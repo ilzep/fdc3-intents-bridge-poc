@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sender App - First window</title>
+  </head>
+  <body  style="background: #00800059;">
+    <button onclick="raiseViewChartIntent()">Raise ViewChart Intent</button>
+    <button onclick="raiseViewInstrumentIntent()">Raise ViewInstrument Intent</button>
+    <script>
+      function raiseViewChartIntent() {
+        const context = { type: 'fdc3.instrument', id: {BBG : 'EURUSD Curncy'} };
+        fdc3.raiseIntent('ViewChart', context);
+      }
+      function raiseViewInstrumentIntent() {
+        const context = { type: 'fdc3.instrument', id: {BBG : 'EURUSD Curncy'} };
+        fdc3.raiseIntent('ViewInstrument', context);
+      }
+    </script>
+  </body>
+</html>
